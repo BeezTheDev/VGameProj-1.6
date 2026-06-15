@@ -3,32 +3,33 @@
 #include "CoreMinimal.h"
 #include "AresItem.h"
 
-#include "EquippableTickState.h"
-#include "EquippableRejectInputReason.h"
 #include "AnimSlot1P.h"
 #include "AnimSlotGun1P.h"
+#include "Sound/SoundCue.h"
 #include "AnimSlotUpperBody3P.h"
+#include "EEquippableEquipBehavior.h"
 #include "AnimSlotLowerBody3P.h"
+#include "EZoomInHideOption.h"
+#include "EZoomOutShowOption.h"
 #include "AnimSlotFace3P.h"
+#include "EAresDropOnDeath.h"
+#include "PendingReplicationEffect.h"
 #include "AsyncLoadedEquippableCharacterAnim.h"
 #include "AsyncLoadedEquippableGunAnim.h"
-#include "EquippableEquipBehavior.h"
-#include "ZoomInHideOption.h"
-#include "ZoomOutShowOption.h"
-#include "AresDropOnDeath.h"
+#include "EquippableStateMachineComponent.h"
 #include "UsablePriority.h"
 #include "EquippableSkinDataAsset.h"
 #include "EquippableSkinLevelDataAsset.h"
 #include "EquippableAttachmentDataAsset.h"
 #include "EquippableSkinChromaDataAsset.h"
+#include "EEquippableRejectInputReason.h"
 #include "EquippableCharmDataAsset.h"
 #include "EquippableCharmLevelDataAsset.h"
 #include "KillBannerData.h"
-#include "ZoomManagerComponent.h"
 #include "CooldownComponent.h"
-#include "EquippableStateMachineComponent.h"
 #include "EquippableFogOfWarComponent.h"
 #include "CycleZoomState.h"
+#include "EEquippableTickState.h"
 
 #include "AresEquippable.generated.h"
 
@@ -137,7 +138,7 @@ public:
     float SecondaryAimSpring1PDampening;
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
-    UAkAudioEvent* PickupSoundEvent;
+    USoundCue* PickupSoundEvent;
 
     UPROPERTY(BlueprintAssignable)
     FOnEquippableRejectedInput OnRejectedInput;
@@ -209,15 +210,6 @@ public:
 
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
     float ScaleOnGround;
-
-    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-    UAkAudioEvent* FootstepEvent;
-
-    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-    UAkAudioEvent* JumpEvent;
-
-    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-    UAkAudioEvent* LandEvent;
 
     UPROPERTY(VisibleInstanceOnly)
     UCooldownComponent* CooldownComponent;

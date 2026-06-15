@@ -1,17 +1,21 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
+#include "EAresEquippableInput.h"
 #include "EquippableStateComponent.h"
+#include "ActiveScriptStateEffect.h"
+#include "EquippableStateBuffInfo.h"
+#include "EAresEquippableInputAction.h"
+#include "ScriptStateEffectInfo.h"
+#include "QueuedStateTransition.h"
 #include "ScriptStateComponent.generated.h"
 
 class UStateComponent;
 class UStateTransitionContext;
 struct FEquippableStateBuffInfo;
-struct FScriptStateEffectInfo;
 struct FActiveScriptStateEffect;
 struct FQueuedStateTransition;
 enum class EAresEquippableInput : uint8;
-enum class EAresEquippableInputAction : uint8;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnScriptStateEnter, UScriptStateComponent*, EnteredState, UStateTransitionContext*, StateTransitionContext, float, StartTimeOffset);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnScriptStateExit, UScriptStateComponent*, ExitedState, UStateTransitionContext*, StateTransitionContext);

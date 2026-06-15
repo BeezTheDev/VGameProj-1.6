@@ -1,7 +1,9 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
+#include "ItemSlotBlocking.h"
 #include "StateComponent.h"
+#include "EStateBehaviorOnUnequip.h"
 #include "EquippableStateComponent.generated.h"
 
 class UValueDisagreementTimer;
@@ -11,8 +13,6 @@ class AAresEquippable;
 class UEquippableStateMachineComponent;
 class AShooterCharacter;
 class AShooterPlayerController;
-struct FItemSlotBlocking;
-enum class EStateBehaviorOnUnequip : uint8;
 
 UCLASS()
 class SHOOTERGAME_API UEquippableStateComponent : public UStateComponent

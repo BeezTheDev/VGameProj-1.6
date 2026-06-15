@@ -9,7 +9,7 @@ class UFogOfWarBoundsComponent;
 class UFogOfWarDebugComponent;
 class UFogOfWarManagerComponent;
 class UViewerFogOfWarComponent;
-struct FEffectID;
+struct FEffectData;
 
 UCLASS()
 class SHOOTERGAME_API UFogOfWarComponent : public UActorComponent
@@ -38,14 +38,8 @@ protected:
     
     UPROPERTY()
     bool bReceivedNetUpdate;
-    
-    UPROPERTY()
-    TArray<UFogOfWarBoundsComponent*> ExtraFogOfWarBounds;
 
 private:
-    
-    UPROPERTY(Transient)
-    FEffectID DebugWallhackEffect;
 
     UPROPERTY()
     TArray<AActor*> CachedAttachedActors;
@@ -55,12 +49,6 @@ private:
 
     UPROPERTY()
     bool bCacheNeedsRebuilding;
-    
-    UPROPERTY()
-    UFogOfWarDebugComponent* DebugComponent;
-
-    UPROPERTY()
-    UFogOfWarManagerComponent* ManagerComponent;
 
 public:
 

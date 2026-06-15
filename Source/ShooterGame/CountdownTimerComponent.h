@@ -2,9 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "TimerState.h"
 #include "CountdownTimerComponent.generated.h"
-
-struct FTimerState;
 
 UCLASS()
 class SHOOTERGAME_API UCountdownTimerComponent : public UActorComponent

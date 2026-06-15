@@ -2,6 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "ScriptStateComponent.h"
+#include "TriggerInput.h"
+#include "InitialZoomLevelContext.h"
 #include "CycleZoomState.generated.h"
 
 class UZoomManagerComponent;

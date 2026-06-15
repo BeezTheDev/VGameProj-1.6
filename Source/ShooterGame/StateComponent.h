@@ -16,11 +16,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	bool bAutoAddToStateMachine;
 
-private:
-
-	UPROPERTY()
-	UStateMachineComponent* OwningStateMachineComponent;
-
 public:
 
 	void CheckStateMachine(AActor* Owner);
